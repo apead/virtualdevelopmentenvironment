@@ -25,5 +25,4 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt update
 sudo apt install code -y
 
-
-
+sudo apt-get install firefox -y
