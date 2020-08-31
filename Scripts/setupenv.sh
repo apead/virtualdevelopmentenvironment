@@ -1,14 +1,14 @@
 #!/bin/bash
 sudo apt-get update
+#sudo apt-get install lxde -y
+sudo apt-get install xfce4 -y
 sudo apt-get install xrdp -y
-#sudo apt-get install xfce4 -y
-sudo apt-get install lxde -y
 
-#sudo echo xfce4-session >/root/.xsession
-#sudo sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
+sudo echo xfce4-session >/root/.xsession
+sudo sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
 
-echo startlxde > ~/.xsession
-sudo /etc/init.d/xrdp start
+#echo startlxde > ~/.xsession
+#sudo /etc/init.d/xrdp start
 
 sudo service xrdp restart
 
