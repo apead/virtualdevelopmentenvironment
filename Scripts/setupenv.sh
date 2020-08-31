@@ -1,15 +1,15 @@
 #!/bin/bash
 sudo apt-get update
-#sudo apt-get install lxde -y
-sudo apt-get install xfce4 -y
+#install gnome desktop
+#sudo apt-get install ubuntu-desktop -y
+#install xrdp
 sudo apt-get install xrdp -y
 
+#using xfce if you are using Ubuntu version later than Ubuntu 12.04LTS
+sudo apt-get install xfce4 -y
+#sudo apt-get install xubuntu-desktop -y
 sudo echo xfce4-session >/root/.xsession
 sudo sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
-
-#echo startlxde > ~/.xsession
-#sudo /etc/init.d/xrdp start
-
 sudo service xrdp restart
 
 #Dotnetsdk
