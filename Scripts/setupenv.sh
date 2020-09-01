@@ -5,15 +5,22 @@ sudo apt-get update
 #install xrdp
 #sudo apt-get install xorgxrdp-hwe-18.04 -y
 #sudo apt-get install xfce4 -y
-sudo apt-get install xrdp -y
-sudo systemctl enable xrdp
+#sudo apt-get install xrdp -y
+#sudo systemctl enable xrdp
 
 #using xfce if you are using Ubuntu version later than Ubuntu 12.04LTS
 
-sudo apt-get install xubuntu-desktop -y
-sudo echo xfce4-session >/root/.xsession
-sudo sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
+#sudo apt-get install xubuntu-desktop -y
+#sudo echo xfce4-session >/root/.xsession
+#sudo sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
+#sudo service xrdp restart
+
+#LUBUNTU
+sudo apt install -y lubuntu-desktop
+sudo apt-get install xrdp 
+sudo echo lxsession -s Lubuntu -e LXDE > ~/.xsession
 sudo service xrdp restart
+
 
 #Dotnetsdk
 wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
