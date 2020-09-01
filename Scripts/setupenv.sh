@@ -1,10 +1,10 @@
 #!/bin/bash
 sudo apt-get update
 #install gnome desktop
-#sudo apt-get install ubuntu-desktop -y
+sudo apt-get install ubuntu-desktop -y
 #install xrdp
 #sudo apt-get install xorgxrdp-hwe-18.04 -y
-sudo apt-get install xfce4 -y
+#sudo apt-get install xfce4 -y
 sudo apt-get install xrdp -y
 sudo systemctl enable xrdp
 
