@@ -32,7 +32,7 @@ sudo service xrdp restart
 sudo systemctl restart xrdp 
 
 sudo systemctl disable apport
-sudo apt purge apport
+sudo apt purge apport -y
 
 
 #Dotnetsdk
