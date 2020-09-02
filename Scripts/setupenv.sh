@@ -22,10 +22,17 @@ sudo apt-get update
 #sudo service xrdp restart
 
 sudo apt update
-sudo apt install xubuntu-desktop
-sudo apt install xrdp 
+sudo apt install xubuntu-desktop -y
+sudo apt install xrdp -y
 sudo adduser xrdp ssl-cert  
-sudo systemctl restart xrdp
+
+sudo echo xfce4-session >/root/.xsession
+sudo sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
+sudo service xrdp restart
+sudo systemctl restart xrdp 
+
+sudo systemctl disable apport
+sudo apt purge apport
 
 
 #Dotnetsdk
@@ -46,3 +53,10 @@ sudo apt update
 sudo apt install code -y
 
 sudo apt-get install firefox -y
+
+sudo tee -a /etc/xrdp/reconnectwm.sh << END
+if (ps aux | grep code | grep -v grep > /dev/null)
+then echo RUNNING
+else code
+fi
+END
