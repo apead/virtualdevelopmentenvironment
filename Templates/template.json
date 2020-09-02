@@ -234,6 +234,9 @@
             "apiVersion": "2016-05-15",
             "name": "[concat('shutdown-computevm-', variables('vmName'))]",
             "location": "[parameters('location')]",
+            "dependsOn": [
+        "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
+      ],
             "properties": {
                 "status": "Enabled",
                 "taskType": "ComputeVmShutdownTask",
