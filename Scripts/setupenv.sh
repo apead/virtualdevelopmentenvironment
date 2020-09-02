@@ -16,10 +16,16 @@ sudo apt-get update
 #sudo service xrdp restart
 
 #LUBUNTU
-sudo apt install -y lubuntu-desktop
-sudo apt-get install xrdp 
-sudo echo lxsession -s Lubuntu -e LXDE > ~/.xsession
-sudo service xrdp restart
+#sudo apt install -y lubuntu-desktop
+#sudo apt-get install xrdp 
+#sudo echo lxsession -s Lubuntu -e LXDE > ~/.xsession
+#sudo service xrdp restart
+
+sudo apt update
+sudo apt install xubuntu-desktop
+sudo apt install xrdp 
+sudo adduser xrdp ssl-cert  
+sudo systemctl restart xrdp
 
 
 #Dotnetsdk
