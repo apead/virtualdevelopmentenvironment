@@ -238,7 +238,7 @@
                 "status": "Enabled",
                 "taskType": "ComputeVmShutdownTask",
                 "dailyRecurrence": {
-                    "time": "01:00:00Z"
+                    "time": "0100"
                 },
                 "timeZoneId": "South Africa Standard Time",
                 "notificationSettings": {
